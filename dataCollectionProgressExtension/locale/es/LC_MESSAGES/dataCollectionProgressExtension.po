@@ -1,0 +1,61 @@
+# Spanish translations for dataCollectionProgressExtension.
+# Copyright (C) 2022 ORGANIZATION
+# This file is distributed under the same license as the
+# dataCollectionProgressExtension project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dataCollectionProgressExtension 1.0\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-01-11 14:50-0600\n"
+"PO-Revision-Date: 2022-01-11 14:21-0600\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: dataCollectionProgressExtension/celerytasks.py:37
+msgid "Alliance"
+msgstr "Alianza"
+
+#: dataCollectionProgressExtension/celerytasks.py:38
+msgid "Progress report on data collection"
+msgstr "Reporte de progreso en la recolección de datos"
+
+#: dataCollectionProgressExtension/celerytasks.py:39
+msgid "Maps of georeferenced points where the forms were applied by field agents."
+msgstr ""
+"Mapas de puntos georreferenciados donde los agentes de campo aplicaron "
+"los formularios."
+
+#: dataCollectionProgressExtension/celerytasks.py:40
+msgid "Table to show if the information was collected and on what date."
+msgstr "Tabla para mostrar si la información fue recolectada y en qué fecha."
+
+#: dataCollectionProgressExtension/celerytasks.py:41
+msgid "Form map"
+msgstr "Mapa del formulario"
+
+#: dataCollectionProgressExtension/celerytasks.py:42
+msgid "Registry"
+msgstr "Registro"
+
+#: dataCollectionProgressExtension/celerytasks.py:43
+msgid "Field agent"
+msgstr "Agentes de campo"
+
+#: dataCollectionProgressExtension/celerytasks.py:44
+msgid "Number of submissions"
+msgstr "Número de envios"
+
+#~ msgid "ClimMob - My private page"
+#~ msgstr ""
+
+#~ msgid "The body goes here"
+#~ msgstr ""
+
