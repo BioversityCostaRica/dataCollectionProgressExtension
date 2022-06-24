@@ -8,6 +8,9 @@ from docx.shared import Mm
 from datetime import datetime
 import folium
 import glob
+import time
+from selenium import webdriver
+from selenium.webdriver import FirefoxOptions
 
 
 @celeryApp.task(base=celeryTask, soft_time_limit=7200, time_limit=7200)
@@ -79,14 +82,24 @@ def createDataCollectionProgress(
         urlMap = "file://" + saveMapPath
         outfn = os.path.join(pathoutput, form["Code"] + ".png")
 
-        #os.system(
+        # os.system(
         #    "xvfb-run xvfb-run --auto-servernum --server-num=1 cutycapt "
         #    + " --url={}".format(urlMap)
         #    + " --out={}".format(outfn)
         #    + " --delay={}".format(3000)
-        #)
+        # )
 
-        os.system("wkhtmltoimage --crop-w 800 {} {}".format(urlMap, outfn))
+        # os.system("wkhtmltoimage --crop-w 800 {} {}".format(urlMap, outfn))
+        print("VERSION SELENIUM")
+        opts = FirefoxOptions()
+        opts.add_argument("--headless")
+        browser = webdriver.Firefox(options=opts)
+        browser.set_window_size(800, 600)
+        browser.get(urlMap)
+        # Give the map tiles some time to load
+        time.sleep(2)
+        browser.save_screenshot(outfn)
+        browser.quit()
 
         form["Image"] = InlineImage(doc, outfn, width=Mm(140))
 
