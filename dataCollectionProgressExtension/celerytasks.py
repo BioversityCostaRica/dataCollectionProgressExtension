@@ -55,7 +55,7 @@ def createDataCollectionProgress(
 
     ## GEOINFORMATION - CREATING MAPS
     for form in geoInformation:
-        m = folium.Map(prefer_canvas=True)
+        m = folium.Map(prefer_canvas=True, width=800, height=600)
 
         for fieldAgent in form["fieldAgents"]:
             for point in fieldAgent["Points"]:
@@ -79,12 +79,14 @@ def createDataCollectionProgress(
         urlMap = "file://" + saveMapPath
         outfn = os.path.join(pathoutput, form["Code"] + ".png")
 
-        os.system(
-            "xvfb-run xvfb-run --auto-servernum --server-num=1 cutycapt "
-            + " --url={}".format(urlMap)
-            + " --out={}".format(outfn)
-            + " --delay={}".format(3000)
-        )
+        #os.system(
+        #    "xvfb-run xvfb-run --auto-servernum --server-num=1 cutycapt "
+        #    + " --url={}".format(urlMap)
+        #    + " --out={}".format(outfn)
+        #    + " --delay={}".format(3000)
+        #)
+
+        os.system("wkhtmltoimage --crop-w 800 {} {}".format(urlMap, outfn))
 
         form["Image"] = InlineImage(doc, outfn, width=Mm(140))
 
