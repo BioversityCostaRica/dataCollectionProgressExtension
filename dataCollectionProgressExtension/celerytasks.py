@@ -94,7 +94,7 @@ def createDataCollectionProgress(
         opts = FirefoxOptions()
         opts.add_argument("--headless")
         browser = webdriver.Firefox(options=opts)
-        browser.set_window_size(800, 600)
+        browser.set_window_size(800, 685)
         browser.get(urlMap)
         # Give the map tiles some time to load
         time.sleep(2)
