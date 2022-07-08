@@ -6,7 +6,7 @@
         <td></td>
         <td></td>
         <td class="text-center">
-            <a href="{{ request.route_url('generateProduct', productid="datacollectionprogress", user=activeProject["owner"].user_name,project=activeProject.project_cod, processname="datacollectionprogress") }}" class="btn btn-default" ><i class="fa fa-plus"></i> {{ _("Create") }}</a>
+            <a href="{{ request.route_url('generateProduct', productid="datacollectionprogress", user=activeProject["owner"].user_name,project=activeProject.project_cod, processname="create_data_collection_progress") }}" class="btn btn-default" ><i class="fa fa-plus"></i> {{ _("Create") }}</a>
         </td>
         <td></td>
     </tr>
@@ -15,7 +15,7 @@
 {% block data_collection_progress_update %}
 
     {% if product.product_id == "datacollectionprogress" %}
-        <a href="{{ request.route_url('generateProduct', productid="datacollectionprogress", user=activeProject["owner"].user_name,project=activeProject.project_cod, processname="datacollectionprogress") }}" class="btn btn-default" ><i class="fa fa-plus"></i> {{ _("Update") }}</a>
+        <a href="{{ request.route_url('generateProduct', productid="datacollectionprogress", user=activeProject["owner"].user_name,project=activeProject.project_cod, processname="create_data_collection_progress") }}" class="btn btn-default" ><i class="fa fa-plus"></i> {{ _("Update") }}</a>
     {% endif %}
 
 {% endblock data_collection_progress_update %}
