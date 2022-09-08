@@ -9,11 +9,41 @@ from dataCollectionProgressExtension.celerytasks import createDataCollectionProg
 
 class dataCollectionProgressExtension(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfig)
+    # plugins.implements(plugins.IProduct)
     plugins.implements(plugins.IDataColletionProgress)
 
     def update_config(self, config):
         # We add here the templates of the plugin to the config
         u.addTemplatesDirectory(config, "templates")
+
+    # def register_products(self, config):
+    #     # DATA COLLECTION PROGRESS
+    #
+    #     # datacollectionprogressProduct = addProduct(
+    #     #     "datacollectionprogress",
+    #     #     "Shows the information of the observers from whom the information has been collected",
+    #     # )
+    #     # addMetadataToProduct(datacollectionprogressProduct, "author", "Brandon Madriz")
+    #     # addMetadataToProduct(datacollectionprogressProduct, "version", "1.0")
+    #     # addMetadataToProduct(
+    #     #     datacollectionprogressProduct,
+    #     #     "Licence",
+    #     #     "Copyright 2020, Alliance of Bioversity International and CIAT",
+    #     # )
+    #     # products.append(datacollectionprogressProduct)
+    #
+    #     productInformation = [
+    #         {
+    #             "name": "datacollectionprogress",
+    #             "description": "Shows the information of the observers from whom the information has been collected",
+    #             "metadata": {
+    #                 "author": "Brandon Madriz",
+    #                 "version": "1.0",
+    #                 "Licence": "Copyright 2022, MrBot Software Solutions",
+    #             },
+    #         }
+    #     ]
+    #     return productInformation
 
     def create_data_collection_progress(
         self,
